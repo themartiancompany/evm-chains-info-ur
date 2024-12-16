@@ -7,8 +7,8 @@ _offline="false"
 _git="false"
 _pkg=evm-chains-info
 pkgname="${_pkg}"
-pkgver="0.0.0.0.0.0.0.0.0.0.0.1.1"
-_commit="ae3d212a6e27ba820d4c703c903c0ea9f77850fd"
+pkgver="0.0.0.0.0.0.0.0.0.0.0.1.1.1"
+_commit="d3661c4a113cf0ed47b0e0fb96822ab5c48d31b7"
 pkgrel=1
 _pkgdesc=(
   "Returns info about EVM blockchains."
@@ -67,7 +67,7 @@ elif [[ "${_git}" == false ]]; then
     _sum="d4f4179c6e4ce1702c5fe6af132669e8ec4d0378428f69518f2926b969663a91"
   elif [[ "${_tag_name}" == "commit" ]]; then
     _src="${_tarname}.zip::${_url}/archive/${_commit}.zip"
-    _sum='8e8239804ecba69c84e9a59a664e9253031105b2cb41b30c3bc952db67a20f3b'
+    _sum='94646045e7c65f8c4abc96455bf2bbb7b3c3a2cfb4975296a239c7a0caae3d55'
   fi
 fi
 source=(
