@@ -76,7 +76,7 @@ fi
 optdepends+=(
 )
 makedepends=(
-  make
+  'make'
 )
 checkdepends=(
   "shellcheck"
