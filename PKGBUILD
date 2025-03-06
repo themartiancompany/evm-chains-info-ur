@@ -43,8 +43,8 @@ _offline="false"
 _git="false"
 _pkg=evm-chains-info
 pkgname="${_pkg}"
-pkgver="0.0.0.0.0.0.0.0.0.0.0.1.1.1.1"
-_commit="8938f33a686ebb626d9b660be9637b49c934b07b"
+pkgver="0.0.0.0.0.0.0.0.0.0.0.1.1.1.1.1"
+_commit="90a5093e46520df446ed90ba893e052ca87adb8c"
 pkgrel=1
 _pkgdesc=(
   "Returns info about EVM blockchains."
@@ -76,7 +76,7 @@ fi
 optdepends+=(
 )
 makedepends=(
-  make
+  'make'
 )
 checkdepends=(
   "shellcheck"
@@ -121,7 +121,9 @@ elif [[ "${_git}" == false ]]; then
     _sum="d4f4179c6e4ce1702c5fe6af132669e8ec4d0378428f69518f2926b969663a91"
   elif [[ "${_tag_name}" == "commit" ]]; then
     _src="${_tarname}.zip::${_url}/archive/${_commit}.zip"
-    _sum="${_archive_sum}"
+    _sum='1f2714da1e71a86408047524dbbf084c4ea2984f12555a3f7b0f1b2884827d07'
+    # for when the new archive has been uploaded to the evmfs
+    # _sum="${_archive_sum}"
   fi
 fi
 source=(
@@ -157,3 +159,4 @@ package() {
 }
 
 # vim: ft=sh syn=sh et
+
