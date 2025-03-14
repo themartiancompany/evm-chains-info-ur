@@ -43,8 +43,8 @@ _offline="false"
 _git="false"
 _pkg=evm-chains-info
 pkgname="${_pkg}"
-pkgver="0.0.0.0.0.0.0.0.0.0.0.1.1.1.1.1"
-_commit="90a5093e46520df446ed90ba893e052ca87adb8c"
+pkgver="0.0.0.0.0.0.0.0.0.0.1.1"
+_commit="44c2f88f6f4dcc12a4409f25a91bcb6d81a74619"
 pkgrel=1
 _pkgdesc=(
   "Returns info about EVM blockchains."
@@ -91,10 +91,10 @@ fi
 _evmfs_network="100"
 _evmfs_address="0x69470b18f8b8b5f92b48f6199dcb147b4be96571"
 _evmfs_ns="0x87003Bd6C074C713783df04f36517451fF34CBEf"
-_archive_sum="95f5984882bb3f0a7f8409290fd66514e179b40903863c8c34373fcaafb7acea"
+_archive_sum='3eacda024d5ae6d203309dbd26b6355412e6dcc94b9b3b269ec9798747dfe51d'
 _evmfs_archive_uri="evmfs://${_evmfs_network}/${_evmfs_address}/${_evmfs_ns}/${_archive_sum}"
 _evmfs_archive_src="${_tarname}.zip::${_evmfs_archive_uri}"
-_archive_sig_sum="65ec5088046d42dfd42635083bc6daeef1734f07220f6e670d5f1be6f6870fb0"
+_archive_sig_sum="76e1cc48a6b14127abdb5c3bc785899afacf2c15088b1d4e66d2191cb97f0f3f"
 _archive_sig_uri="evmfs://${_evmfs_network}/${_evmfs_address}/${_evmfs_ns}/${_archive_sig_sum}"
 _archive_sig_src="${_tarname}.zip.sig::${_archive_sig_uri}"
 if [[ "${_evmfs}" == "true" ]]; then
@@ -121,9 +121,7 @@ elif [[ "${_git}" == false ]]; then
     _sum="d4f4179c6e4ce1702c5fe6af132669e8ec4d0378428f69518f2926b969663a91"
   elif [[ "${_tag_name}" == "commit" ]]; then
     _src="${_tarname}.zip::${_url}/archive/${_commit}.zip"
-    _sum='1f2714da1e71a86408047524dbbf084c4ea2984f12555a3f7b0f1b2884827d07'
-    # for when the new archive has been uploaded to the evmfs
-    # _sum="${_archive_sum}"
+    _sum="${_archive_sum}"
   fi
 fi
 source=(
