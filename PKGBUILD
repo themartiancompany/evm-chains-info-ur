@@ -44,8 +44,8 @@ _git="false"
 _py="python"
 _pkg=evm-chains-info
 pkgname="${_pkg}"
-pkgver="0.0.0.0.0.0.0.0.0.0.1.1.1.1"
-_commit="5159dcbc219610019f16b0aa49c97709c2f1aa57"
+pkgver="0.0.0.0.0.0.0.0.0.0.1.1.1.1.1"
+_commit="b0fdd2c76a07cdc22b45ea2c1c94ae4f0c13e31d"
 pkgrel=1
 _pkgdesc=(
   "Returns info about EVM blockchains."
@@ -93,10 +93,10 @@ fi
 _evmfs_network="100"
 _evmfs_address="0x69470b18f8b8b5f92b48f6199dcb147b4be96571"
 _evmfs_ns="0x87003Bd6C074C713783df04f36517451fF34CBEf"
-_archive_sum='c2e121c440e4bf9371641721a629bcab2073c831e60221fe2c35bcff5994c85d'
+_archive_sum='7fa1f3c177a0919ab33e558b227c6b33b9344b1a575b38db2827daba29ece856'
 _evmfs_archive_uri="evmfs://${_evmfs_network}/${_evmfs_address}/${_evmfs_ns}/${_archive_sum}"
 _evmfs_archive_src="${_tarname}.zip::${_evmfs_archive_uri}"
-_archive_sig_sum="0da51d2f24c43a194c163935037dcdddd9fc316c5a066cd028c672268c06b1aa"
+_archive_sig_sum="b56118268c9448097ac585afa93c37eb714dc12d693454c676fc8ce49d726b0f"
 _archive_sig_uri="evmfs://${_evmfs_network}/${_evmfs_address}/${_evmfs_ns}/${_archive_sig_sum}"
 _archive_sig_src="${_tarname}.zip.sig::${_archive_sig_uri}"
 if [[ "${_evmfs}" == "true" ]]; then
