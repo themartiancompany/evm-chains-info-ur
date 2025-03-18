@@ -41,10 +41,11 @@ if [[ ! -v "_evmfs" ]]; then
 fi
 _offline="false"
 _git="false"
+_py="python"
 _pkg=evm-chains-info
 pkgname="${_pkg}"
-pkgver="0.0.0.0.0.0.0.0.0.0.1.1"
-_commit="44c2f88f6f4dcc12a4409f25a91bcb6d81a74619"
+pkgver="0.0.0.0.0.0.0.0.0.0.1.1.1.1"
+_commit="5159dcbc219610019f16b0aa49c97709c2f1aa57"
 pkgrel=1
 _pkgdesc=(
   "Returns info about EVM blockchains."
@@ -77,6 +78,7 @@ optdepends+=(
 )
 makedepends=(
   'make'
+  "${_py}-docutils"
 )
 checkdepends=(
   "shellcheck"
@@ -91,10 +93,10 @@ fi
 _evmfs_network="100"
 _evmfs_address="0x69470b18f8b8b5f92b48f6199dcb147b4be96571"
 _evmfs_ns="0x87003Bd6C074C713783df04f36517451fF34CBEf"
-_archive_sum='3eacda024d5ae6d203309dbd26b6355412e6dcc94b9b3b269ec9798747dfe51d'
+_archive_sum='c2e121c440e4bf9371641721a629bcab2073c831e60221fe2c35bcff5994c85d'
 _evmfs_archive_uri="evmfs://${_evmfs_network}/${_evmfs_address}/${_evmfs_ns}/${_archive_sum}"
 _evmfs_archive_src="${_tarname}.zip::${_evmfs_archive_uri}"
-_archive_sig_sum="76e1cc48a6b14127abdb5c3bc785899afacf2c15088b1d4e66d2191cb97f0f3f"
+_archive_sig_sum="0da51d2f24c43a194c163935037dcdddd9fc316c5a066cd028c672268c06b1aa"
 _archive_sig_uri="evmfs://${_evmfs_network}/${_evmfs_address}/${_evmfs_ns}/${_archive_sig_sum}"
 _archive_sig_src="${_tarname}.zip.sig::${_archive_sig_uri}"
 if [[ "${_evmfs}" == "true" ]]; then
@@ -157,4 +159,3 @@ package() {
 }
 
 # vim: ft=sh syn=sh et
-
