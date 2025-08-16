@@ -162,7 +162,7 @@ package() {
     install
   install \
     -vDm644 \
-    LICENSE \
+    "COPYING" \
     "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
 
