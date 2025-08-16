@@ -95,8 +95,8 @@ if [[ "${_offline}" == "true" ]]; then
   _url="file://${HOME}/${pkgname}"
 fi
 _evmfs_ns="0x87003Bd6C074C713783df04f36517451fF34CBEf"
-_archive_sum="7a0cca8eeefae35aaf866058a760ca6230207dede804389c8ad90d22346af3d6"
-_archive_sig_sum="4b89dcdfda7ba3504cb8308b3ce13a02b21ecd798c822a21ad1b60b2df9188b5"
+_archive_sum="b2722667eb9fecd50a5b175d7bafde8300fb1a616bd10e21a1984ff270db94f9"
+_archive_sig_sum="2757b3a5e67a5f269a527c674464506d895dd1f3e7a617f493c4785e9c08fb7d"
 _evmfs_network="100"
 _evmfs_address="0x69470b18f8b8b5f92b48f6199dcb147b4be96571"
 _evmfs_dir="evmfs://${_evmfs_network}/${_evmfs_address}/${_evmfs_ns}"
