@@ -69,7 +69,7 @@ if [[ "${_docs}" == "true" ]]; then
 fi
 pkgver="0.0.0.0.0.0.0.0.0.0.1.1.1.1.1.1.1"
 _commit="6650d557345e24d6d34c3ee44fc184e583e6404a"
-pkgrel=1
+pkgrel=2
 _pkgdesc=(
   "Returns info about EVM blockchains."
 )
