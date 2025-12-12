@@ -56,6 +56,9 @@ if [[ "${_git_http}" == "github" ]]; then
 elif [[ "${_git_http}" == "gitlab" ]]; then
   _archive_format="tar.gz"
 fi
+if [[ ! -v "_docs" ]]; then
+  _docs="true"
+fi
 _py="python"
 _pkg=evm-chains-info
 pkgbase="${_pkg}"
@@ -132,8 +135,8 @@ _tarfile="${_tarname}.${_archive_format}"
 if [[ "${_offline}" == "true" ]]; then
   _url="file://${HOME}/${pkgname}"
 fi
-_archive_sum="b2722667eb9fecd50a5b175d7bafde8300fb1a616bd10e21a1984ff270db94f9"
-_archive_sig_sum="2757b3a5e67a5f269a527c674464506d895dd1f3e7a617f493c4785e9c08fb7d"
+_sum="b2722667eb9fecd50a5b175d7bafde8300fb1a616bd10e21a1984ff270db94f9"
+_sig_sum="2757b3a5e67a5f269a527c674464506d895dd1f3e7a617f493c4785e9c08fb7d"
 # Dvorak
 _evmfs_ns="0x87003Bd6C074C713783df04f36517451fF34CBEf"
 _evmfs_network="100"
