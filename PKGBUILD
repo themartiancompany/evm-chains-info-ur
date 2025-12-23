@@ -72,7 +72,7 @@ if [[ "${_docs}" == "true" ]]; then
 fi
 pkgver="0.0.0.0.0.0.0.0.0.0.1.1.1.1.1.1.1"
 _commit="6650d557345e24d6d34c3ee44fc184e583e6404a"
-pkgrel=4
+pkgrel=5
 _pkgdesc=(
   "Returns info about EVM blockchains."
 )
@@ -139,6 +139,8 @@ _sum="e29237eb0cdc1c2670a31241a094d7d511d5bc9ff741dea559e229e24dd2d7bc"
 _sig_sum="d1c4d6be3b116678660c5ec9778413f9caa4271063b238da32074d815aedd374"
 # Dvorak
 _evmfs_ns="0x87003Bd6C074C713783df04f36517451fF34CBEf"
+# Truocolo
+_evmfs_ns="0x6E5163fC4BFc1511Dbe06bB605cc14a3e462332b"
 _evmfs_network="100"
 _evmfs_address="0x69470b18f8b8b5f92b48f6199dcb147b4be96571"
 _evmfs_dir="evmfs://${_evmfs_network}/${_evmfs_address}/${_evmfs_ns}"
