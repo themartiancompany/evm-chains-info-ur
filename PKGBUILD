@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: AGPL-3.0
 
 #    ----------------------------------------------------------------------
-#    Copyright © 2024, 2025  Pellegrino Prevete
+#    Copyright © 2024, 2025, 2026  Pellegrino Prevete
 #
 #    All rights reserved
 #    ----------------------------------------------------------------------
@@ -135,8 +135,21 @@ _tarfile="${_tarname}.${_archive_format}"
 if [[ "${_offline}" == "true" ]]; then
   _url="file://${HOME}/${pkgname}"
 fi
-_sum="e29237eb0cdc1c2670a31241a094d7d511d5bc9ff741dea559e229e24dd2d7bc"
-_sig_sum="d1c4d6be3b116678660c5ec9778413f9caa4271063b238da32074d815aedd374"
+_gitlab_sum="e29237eb0cdc1c2670a31241a094d7d511d5bc9ff741dea559e229e24dd2d7bc"
+_gitlab_sig_sum="d1c4d6be3b116678660c5ec9778413f9caa4271063b238da32074d815aedd374"
+_github_sum="SKIP"
+_gitlab_sig_sum="SKIP"
+if [[ "${_evmfs}" == "false" ]]; then
+  if [[ "${_git}" == "false" ]]; then
+    if [[ "${_git_http}" == "github" ]]; then
+      _sum="${_github_sum}"
+      _sig_sum="${_github_sig_sum}"
+    elif [[ "${_git_http}" == "gitlab" ]]; then
+      _sum="${_gitlab_sum}"
+      _sig_sum="${_gitlab_sig_sum}"
+    fi
+  fi
+fi
 # Dvorak
 _evmfs_ns="0x87003Bd6C074C713783df04f36517451fF34CBEf"
 # Truocolo
