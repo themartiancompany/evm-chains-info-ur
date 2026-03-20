@@ -75,7 +75,7 @@ if [[ "${_docs}" == "true" ]]; then
 fi
 pkgver="0.0.0.0.0.0.0.0.0.0.1.1.1.1.1.1.1"
 _commit="6650d557345e24d6d34c3ee44fc184e583e6404a"
-pkgrel=11
+pkgrel=12
 _pkgdesc=(
   "Returns info about EVM blockchains."
 )
@@ -154,8 +154,12 @@ if [[ "${_evmfs}" == "false" ]]; then
   fi
 elif [[ "${_evmfs}" == "true" ]]; then
   if [[ "${_git}" == "false" ]]; then
-    _sum="${_gitlab_sum}"
-    _sig_sum="${_gitlab_sig_sum}"
+    if [[ "${_git_service}" == "github" ]]; then
+      _sum="${_github_sum}"
+      _sig_sum="${_github_sig_sum}"
+    elif [[ "${_git_service}" == "gitlab" ]]; then
+      _sum="${_gitlab_sum}"
+      _sig_sum="${_gitlab_sig_sum}"
   fi
 fi
 # Dvorak
