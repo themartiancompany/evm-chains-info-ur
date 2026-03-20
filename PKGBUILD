@@ -48,8 +48,11 @@ fi
 if [[ ! -v "_offline" ]]; then
   _offline="false"
 fi
+if [[ ! -v "_git_service" ]]; then
+  _git_service="gitlab"
+fi
 if [[ ! -v "_git_http" ]]; then
-  _git_http="gitlab"
+  _git_http="${_git_service}"
 fi
 if [[ "${_git_http}" == "github" ]]; then
   _archive_format="zip"
@@ -72,7 +75,7 @@ if [[ "${_docs}" == "true" ]]; then
 fi
 pkgver="0.0.0.0.0.0.0.0.0.0.1.1.1.1.1.1.1"
 _commit="6650d557345e24d6d34c3ee44fc184e583e6404a"
-pkgrel=8
+pkgrel=9
 _pkgdesc=(
   "Returns info about EVM blockchains."
 )
@@ -137,8 +140,8 @@ if [[ "${_offline}" == "true" ]]; then
 fi
 _gitlab_sum="e29237eb0cdc1c2670a31241a094d7d511d5bc9ff741dea559e229e24dd2d7bc"
 _gitlab_sig_sum="d1c4d6be3b116678660c5ec9778413f9caa4271063b238da32074d815aedd374"
-_github_sum="SKIP"
-_github_sig_sum="SKIP"
+_github_sum="b2722667eb9fecd50a5b175d7bafde8300fb1a616bd10e21a1984ff270db94f9"
+_github_sig_sum="1c05df97af0ac0d81ce320bcf548b943602f9b6b85c5d2e881aa98950b8f1c04"
 if [[ "${_evmfs}" == "false" ]]; then
   if [[ "${_git}" == "false" ]]; then
     if [[ "${_git_http}" == "github" ]]; then
